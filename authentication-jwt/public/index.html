@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<title>authentication jwt with angularjs</title>
+</head>
+<body ng-controller="MainCtrl as vm">
+	
+	<h1>Get random user</h1>
+
+	<form ng-submit="vm.login(vm.username, vm.password)">
+		<label for=""> 
+			Username: 
+			<input  ng-model="vm.username" type="text">
+		</label> <br>
+
+		<label for="">
+			Password:
+			<input type="password" ng-model="vm.password"> <br>
+		</label>
+
+		<button type="submit">Login</button>
+	</form>
+
+	<div>
+		<h2>wellcome {{ vm.user.username }}</h2>
+		<button ng-click="vm.logout()">Logout</button>
+		<button ng-click="vm.getRandomUser()">Get user</button>
+		<pre ng-bind="vm.randomUser | json"></pre>
+	</div>
+
+	<script src="bower_components/angular/angular.min.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>
