@@ -31,4 +31,15 @@ describe('Controller: listCtrl', function(){
 
 	});
 
+	it('should return lenght of object', function(){
+		var item = [
+			{ id: 1, lavel: 'first', done: true },
+			{ id: 2, lavel: 'second', done: false },
+			{ id: 2, lavel: 'second', done: false }
+		];
+
+		var count = ctrl.countList(item); 
+		expect(count).toEqual(3);
+	});
+
 });

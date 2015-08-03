@@ -18,5 +18,9 @@
 					unfinished: !item.done
 				};
 			};
+
+			self.countList = function(item){
+				return Object.keys(item).length;
+			};
 		}
 })();
