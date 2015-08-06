@@ -2,11 +2,12 @@ describe('Controller: listCtrl', function(){
 	//instanciando o modulo antes de cada it
 	beforeEach(module('notesApp'));
 
-	var ctrl;
+	var ctrl, $loc;
 
 	//instancio o controller antes de cada it
-	beforeEach(inject(function($controller){
+	beforeEach(inject(function($controller, $location){
 		ctrl = $controller('listCtrl');
+		$loc = $location;
 	}));
 
 	it('should have items available on load', function(){
@@ -40,6 +41,13 @@ describe('Controller: listCtrl', function(){
 
 		var count = ctrl.countList(item); 
 		expect(count).toEqual(3);
+	});
+
+	it('should navigate away from the current page', function() {
+		$loc.path('/here');
+		ctrl.navigate();
+
+		expect($loc.path()).toEqual('/some/where/else');
 	});
 
 });

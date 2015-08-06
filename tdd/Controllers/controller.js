@@ -4,7 +4,9 @@
 	angular.module('notesApp', [])
 		.controller('listCtrl', listCtrl);
 
-		function listCtrl() {
+		listCtrl.$inject = ['$location'];
+
+		function listCtrl($location) {
 			var self = this;
 
 			self.items = [
@@ -22,5 +24,9 @@
 			self.countList = function(item){
 				return Object.keys(item).length;
 			};
+
+			self.navigate = function(){
+				$location.path('/some/where/else');
+			}
 		}
 })();
