@@ -1,3 +1,4 @@
 /authentication-jwt/node_modules
 /tdd/Controllers/node_modules
 tdd/Controllers/coverage
+.DS_Store
