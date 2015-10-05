@@ -1,15 +1,17 @@
-Name: {{ user.name }} 
-<br>
-<br> 
-<div ng-if='!!user.address'> 
-	address: <br> 
-	{{ user.address.city }} <br> 
-	{{ user.address.phone }}
-</div> 
-<br/>
 <div>
-	friends: 
-	<div ng-repeat='friend in user.friends'>
-		{{ friend }}
+	Name: {{ user.name }} 
+	<br>
+	<br> 
+	<div ng-if='!!user.address'> 
+		address: <br> 
+		{{ user.address.city }} <br> 
+		{{ user.address.phone }}
+	</div> 
+	<br/>
+	<div>
+		friends: 
+		<div ng-repeat='friend in user.friends'>
+			{{ friend }}
+		</div>
 	</div>
 </div>
