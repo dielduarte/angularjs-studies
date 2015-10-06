@@ -1,0 +1,9 @@
+		<div ng-if='!!user.address && !collapsed' ng-click="collapseAddress()"> 
+			<h4>address:</h4>
+			{{ user.address.city }} <br> 
+			{{ user.address.phone }}
+		</div> 
+		<div class="" ng-if='!!user.address && collapsed' ng-click="expandAddress()">
+			<h4>address:</h4>
+			{{ user.address.city }}...
+		</div>

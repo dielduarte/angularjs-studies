@@ -1,0 +1,5 @@
+<span style="cursor:pointer;" ng-click="startRemove()" ng-if="!removing">X</span>
+<span ng-if="removing">
+	<button ng-click="confirmRemove()">remove</button>
+	<button ng-click="cancelRemove()">never mind</button>
+</span> 
