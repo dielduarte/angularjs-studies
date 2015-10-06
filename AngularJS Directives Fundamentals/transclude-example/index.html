@@ -1,0 +1,24 @@
+<!doctype html>
+<html ng-app='app'>
+  <head>
+    <title>My Angular App</title>
+		<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  
+  </head>
+  <body ng-controller='MainController as vm' class="container" style="padding-top: 30px;">
+			
+    <my-question q="eu sou uma directiva?">
+      <input type="checkbox"> sim <br>
+      <input type="checkbox"> nao
+    </my-question> 
+
+    <my-question q="qual e seu nome?">
+      <input type="text" ng-model="nome"> <br>
+      meu nome e {{ nome }}
+    </my-question> 
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>	
+  	<script src="js/app.js"></script>
+  </body>
+</html>
