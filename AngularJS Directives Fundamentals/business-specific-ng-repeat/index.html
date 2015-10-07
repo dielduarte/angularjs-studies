@@ -1,0 +1,25 @@
+<!doctype html>
+<html ng-app='app'>
+  <head>
+    <title>My Angular App</title>
+		<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  
+  </head>
+  <body ng-controller='MainController as vm' class="container" style="padding-top: 30px;">
+			
+      <h1 class="well">Bounty Hunters</h1>
+      
+      <div user-list="hunter in bountyHunters">
+          <h3>name: {{ hunter.name }}</h3>
+      </div>
+      <hr>
+      <button class="btn btn-primary" ng-click="add()">Add</button>
+      <button class="btn btn-primary" ng-click="remove()">Remove</button>
+
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>	
+  	<script src="js/app.js"></script>
+  </body>
+</html>
